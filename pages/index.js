@@ -25,7 +25,7 @@ export default function Home({ configData }) {
           Movie Walls
         </Typography>
         <Typography variant='body' align='center' gutterBottom paragraph>
-          One destination for film wallpapers
+          One destination for movie wallpapers
         </Typography>
         <SearchBar onSelect={handleMovieSelected} />
         {backdrops && <Backdrops data={backdrops} config={configData} />}
