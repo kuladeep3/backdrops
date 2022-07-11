@@ -37,7 +37,7 @@ export default function Home({ configData }) {
 export async function getStaticProps() {
   const configData = {};
   try {
-    const responseData = await fetch("https://api.themoviedb.org/3/configuration?api_key=61b9ae9006a919c803f39f6122ae4686");
+    const responseData = await fetch(`https://api.themoviedb.org/3/configuration?api_key=${process.env.NEXT_PUBLIC_API_KEY}`);
     const response = await responseData.json();
     if (response?.images?.base_url) {
       configData.base_url = response.images.base_url;
